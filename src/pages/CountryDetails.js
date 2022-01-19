@@ -106,9 +106,10 @@ const CountryDetails = () => {
                     <div>
                       <span className="font-medium">Languages: </span>
                       <span className="font-light">
-                        {country.languages.map((language) => (
-                          <span key={language.name}>{language.name}, </span>
-                        ))}
+                        {country.languages &&
+                          country.languages.map((language) => (
+                            <span key={language.name}>{language.name}, </span>
+                          ))}
                       </span>
                     </div>
                   </div>
@@ -116,14 +117,15 @@ const CountryDetails = () => {
                 <div className="text-sm">
                   <span className="font-medium">Border Countries: </span>
                   <span className="flex flex-wrap">
-                    {country.borders.map((border) => (
-                      <span
-                        className="bg-white text-gray-700 dark:bg-gray-700 dark:text-gray-50 py-0.5 px-6 rounded-sm shadow mx-1"
-                        key={border}
-                      >
-                        {border}
-                      </span>
-                    ))}
+                    {country.borders &&
+                      country.borders.map((border) => (
+                        <span
+                          className="bg-white text-gray-700 dark:bg-gray-700 dark:text-gray-50 py-0.5 px-6 rounded-sm shadow mx-1"
+                          key={border}
+                        >
+                          {border}
+                        </span>
+                      ))}
                   </span>
                 </div>
               </div>
